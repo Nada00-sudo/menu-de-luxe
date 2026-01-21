@@ -28,7 +28,7 @@ function Header() {
     <div className="hedearclass">
       <div className="nav-left">
         <div className="all-content" onClick={scrollToApropos} style={{ cursor: 'pointer' }}>À propos</div>
-        <div className="all-content" onClick={scrollToMenu} style={{ cursor: 'pointer' }}>Menu</div>
+        <div onClick={scrollToMenu} style={{ cursor: 'pointer' }}>Menu</div>
       </div>
 
       {/* LOGO FIXE AU CENTRE */}
