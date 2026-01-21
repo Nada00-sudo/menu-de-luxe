@@ -1,5 +1,5 @@
 import heroVideo from '../assets/video_hero.mp4'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import './Hero.css'
 
 const texts = [
@@ -23,13 +23,6 @@ const texts = [
 function Hero() {
     const [index, setIndex] = useState(0)
   const [visible, setVisible] = useState(true)
-  const videoRef = useRef(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => console.log('Autoplay was prevented:', error))
-    }
-  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -45,7 +38,6 @@ function Hero() {
   return (
     <section className="hero">
       <video
-        ref={videoRef}
         className="hero-video"
         src={heroVideo}
         autoPlay

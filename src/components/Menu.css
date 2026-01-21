@@ -102,7 +102,8 @@
   flex-direction:column;
 }
 @media (max-width: 992px) {
-  .menuMenu{ width: 80%;
+  .menuMenu{ width: 90%;
+    padding:10%;
   }
   .menutitle{font-size: 10px;}
   .menuminititle{font-size:18px;}
