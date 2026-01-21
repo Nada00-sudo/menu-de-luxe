@@ -37,7 +37,7 @@ function Header() {
       {/* RIGHT */}
       <div className="nav-right">
         <div className="all-content" onClick={scrollToFooter} style={{ cursor: 'pointer' }}>Contact</div>
-        <button >Réserver</button>
+        <button className="all-content" >Réserver</button>
       </div>
     </div>    
     </>
