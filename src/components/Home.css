@@ -148,9 +148,9 @@
   height: auto;
   z-index:2; 
 }
-.h1 { display:none;}
+.h1,.h2 { display:none;}
 .description p{
-  font-size: 17px;
+  font-size: 19px;
 }
 .description span{
   font-size: 15px;

@@ -3,7 +3,7 @@ import Hero from './Hero'
 import Apropos from './Apropos'
 import restaut3 from '../assets/restaut_3_3.jpg'
 import restaut4 from '../assets/restaut_4_4.jpg'
-import frame from '../assets/Frame.svg'
+import frame from '../assets/Frame (2).svg'
 import forchette from '../assets/forchette.png'
 import couteau from '../assets/couteau.png'
 import { useNavigate } from "react-router-dom";
