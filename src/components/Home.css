@@ -131,6 +131,7 @@
 
 
 @media (max-width: 992px) {
+  
   .description {
     flex-direction: column;
     justify-content: center;
