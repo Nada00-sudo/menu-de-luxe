@@ -66,5 +66,6 @@
     margin-top: 10%;
   }
   .nav-left{display:none;}
-.nav-right{display:none;}
+  .nav-right{display:none;}
+  .hedearclass{justify-content: center;}
 }
