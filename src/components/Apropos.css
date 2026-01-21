@@ -151,7 +151,7 @@
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
   z-index: 2;
   bottom:-85px;
-  right: 10%;
+  right: 20%;
 }
 .image_restaut .img-overlay {
   position: absolute;
