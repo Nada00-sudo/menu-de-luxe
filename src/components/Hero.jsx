@@ -49,12 +49,12 @@ function Hero() {
   return (
     <section className="hero">
       <video
-        ref={videoRef}          // ✅ AJOUT
+        ref={videoRef}         
         className="hero-video"
         src={heroVideo}
-        muted                  // ✅ OBLIGATOIRE mobile
+        muted               
         loop
-        playsInline            // ✅ OBLIGATOIRE iOS
+        playsInline           
         preload="auto"
       />
       
