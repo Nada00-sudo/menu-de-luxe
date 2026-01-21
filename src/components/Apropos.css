@@ -145,7 +145,7 @@
 }
 .image_restaut .img-main {
   position: relative;
-  width: 90%;
+  width:    80%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
@@ -157,7 +157,7 @@
   position: absolute;
   top: 45%;      
   right: 7%;     
-  width: 40%;
+  width: 35%;
   height: auto;
 
   border-radius: 6px;
