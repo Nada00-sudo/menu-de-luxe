@@ -10,7 +10,7 @@ function Menu() {
   </div>
 
   <div className="hero-contentf">
-    <h1>MENU</h1>
+    <h1>Notre Menu</h1>
     <p>
       Un menu d'exception où chaque plat, élaboré à partir de produits nobles
       et sublimé par un savoir-faire raffiné, offre une expérience gastronomique
