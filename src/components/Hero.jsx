@@ -1,5 +1,5 @@
 import heroVideo from '../assets/video_hero.mp4'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Hero.css'
 
 const texts = [
@@ -21,31 +21,44 @@ const texts = [
 ]
 
 function Hero() {
-    const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0)
   const [visible, setVisible] = useState(true)
+
+  // ✅ AJOUT
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    // ✅ force le play sur mobile (iOS / Safari)
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
+    }
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false) // fade out
+      setVisible(false)
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % texts.length)
-        setVisible(true) // fade in
+        setVisible(true)
       }, 1000)
-    }, 9000) // change toutes les 4s
+    }, 9000)
 
     return () => clearInterval(interval)
   }, [])
+
   return (
     <section className="hero">
       <video
+        ref={videoRef}          // ✅ AJOUT
         className="hero-video"
         src={heroVideo}
-        autoPlay
+        muted                  // ✅ OBLIGATOIRE mobile
         loop
-        muted
-        playsInline
+        playsInline            // ✅ OBLIGATOIRE iOS
+        preload="auto"
       />
-       <div className={`hero-content ${visible ? 'show' : 'hide'}`}>
+      
+      <div className={`hero-content ${visible ? 'show' : 'hide'}`}>
         <h1>{texts[index].title}</h1>
         <p>
           {texts[index].subtitle.split('\n').map((line, i) => (
