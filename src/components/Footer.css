@@ -1,0 +1,80 @@
+.footerclass {
+  position: relative;
+  background-image: url("../assets/footer_vibe.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.footerclass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #D6654F;
+  opacity: 0.7; /* ajuste l'intensité */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.addfooter div {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.addfooter{
+    margin: 0% 10%;
+    padding: 3% 0%;
+    display: flex;
+    justify-content:space-between;
+    z-index:2;
+
+}
+
+.addfooter p{
+    color: #DFA842;
+    font-size: 20px;
+    font-weight: 700;
+}
+.addfooter span{
+    color: #4A1414;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.les_svg{
+  display: flex;
+  flex-direction: row !important;
+  gap: 12px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/* ✅ Mobile (et tablette) : footer en colonne */
+@media (max-width: 768px) {
+  .addfooter{
+    flex-direction: column;
+    gap: 25px;           /* espace entre les 3 blocs */
+    align-items: flex-start;
+  }
+
+  .addfooter > div{
+    width: 100%;         /* chaque bloc prend toute la largeur */
+  }
+}
+@media (max-width: 768px) {
+  .les_svg{
+    justify-content: center;
+    width: 100%;
+  }
+  .addfooter p{
+    font-size: 17px;
+    font-weight: 700;
+}
+.addfooter span{
+    color: #4A1414;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+}

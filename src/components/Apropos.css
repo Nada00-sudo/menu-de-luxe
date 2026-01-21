@@ -1,0 +1,169 @@
+.Apropos{
+    height: 100vh;
+    background-color:#6B1E1E;
+    position: relative;  
+    display: flex;
+    align-items: center;
+
+}
+
+/* Lignes gauche */
+.lines-left::before{
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 80%;
+  width: 1px;
+  left: 20%;
+  background: rgba(234, 198, 131, 0.4);
+}
+
+
+.lines-left::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  width: 1px;
+  left: 60%;
+  background: rgba(234, 198, 131, 0.4);
+}
+
+
+.Apropos-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  width: 50%;
+}
+
+.Apropos-element div{
+    text-align: center;
+    margin: 2% 10%;
+}
+.corner {
+  position: absolute;
+  width: 8%;           
+  height: auto;
+  pointer-events: none;   
+}
+@media (max-width: 992px) {
+  .corner{width: 20%;}
+  
+}
+.corner-tr {
+  top: 0;
+  right: 0;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+}
+.essetiels{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.titre{
+    color: #EAC683;
+    font-size: 30px;
+}
+
+.texte{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.image_restaut {
+
+  width: 50%;
+  display: flex;
+
+}
+
+/* image principale (grande) */
+.image_restaut .img-main {
+  position: relative;
+  width: 37%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  z-index: 2;
+  bottom:-40px;
+}
+
+.image_restaut .img-overlay {
+  position: absolute;
+  top: 60px;      
+  right: 15%;     
+  width: 17%;
+  height: auto;
+
+  border-radius: 6px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  
+}
+
+
+.images{
+    display:flex;
+    height: 50%;
+}
+
+@media (max-width: 992px) {
+.titre{
+    font-size: 25px;
+}
+.texte{
+    font-size: 18px;
+}
+.texteBLOCK{
+  display: none;
+}
+.essetiels{
+    flex-direction:column;
+       
+}
+
+.Apropos-element {
+  width: 100%;
+  margin-top: 7%;
+}
+.image_restaut .img-main {
+  position: relative;
+  width: 65%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  z-index: 2;
+  bottom:-80px;
+}
+.image_restaut .img-overlay {
+  position: absolute;
+  top: 45%;      
+  right: 19%;     
+  width: 28%;
+  height: auto;
+
+  border-radius: 6px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  
+}
+.Apropos{
+    align-items:baseline;
+
+}
+}
