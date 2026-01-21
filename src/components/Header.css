@@ -48,7 +48,7 @@
 .all-content { display: block; }
 .logo, .btn-reserver { display: block; }
 .logo{
-  width: 180px;
+  width: 200px;
 }
 @media (max-width: 992px) {
   .all-content { display: none; }      
@@ -56,14 +56,14 @@
     
   } 
 
-  .logo{height: 100px; 
+  .logo{height: 120px; 
     width: auto;
 
   }
   .hedearclass button{padding: 5px 10px;}
   .headerclass{margin-right: 5%;
     margin-left: 5%;
-    margin-top: 10%;
+    margin-top: 15%;
   }
   .nav-left{display:none;}
   .nav-right{display:none;}
