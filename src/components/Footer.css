@@ -63,10 +63,7 @@
   }
 }
 @media (max-width: 768px) {
-  .les_svg{
-    justify-content: center;
-    width: 100%;
-  }
+  
   .addfooter p{
     font-size: 17px;
     font-weight: 700;
