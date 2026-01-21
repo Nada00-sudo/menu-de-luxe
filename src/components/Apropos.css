@@ -136,7 +136,7 @@
 }
 .essetiels{
     flex-direction:column;
-       
+    padding-top:10%;
 }
 
 .Apropos-element {
@@ -145,18 +145,18 @@
 }
 .image_restaut .img-main {
   position: relative;
-  width: 80%;
+  width: 90%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
   z-index: 2;
-  bottom:-80px;
+  bottom:-95px;
 }
 .image_restaut .img-overlay {
   position: absolute;
   top: 45%;      
-  right: 19%;     
-  width: 30%;
+  right: 5%;     
+  width: 40%;
   height: auto;
 
   border-radius: 6px;
