@@ -62,6 +62,7 @@
   justify-content: center;
   align-items: center; 
   z-index:2; 
+  padding-bottom:7%;
   padding-left:2%;
   padding-right:2%;
 }
@@ -135,6 +136,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .description div{
   margin: 4% 0%;
 }
@@ -149,6 +151,7 @@
   height: auto;
   z-index:2; 
 }
+.menu{padding-bottom:0%;}
 .h1,.h2 { display:none;}
 .description p{
   font-size: 19px;
