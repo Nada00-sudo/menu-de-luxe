@@ -28,9 +28,20 @@ function Hero() {
   const videoRef = useRef(null)
 
   useEffect(() => {
-    // ✅ force le play sur mobile (iOS / Safari)
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {})
+    const unlockVideo = () => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {})
+      }
+      window.removeEventListener('touchstart', unlockVideo)
+      window.removeEventListener('click', unlockVideo)
+    }
+
+    window.addEventListener('touchstart', unlockVideo)
+    window.addEventListener('click', unlockVideo)
+
+    return () => {
+      window.removeEventListener('touchstart', unlockVideo)
+      window.removeEventListener('click', unlockVideo)
     }
   }, [])
 
