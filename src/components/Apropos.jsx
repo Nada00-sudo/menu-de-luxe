@@ -7,9 +7,10 @@ import coint_haut_gauche from '../assets/coint_haut_gauche.png';
 import restaut_1 from '../assets/restaut_1.jpg';
 import restaut_2 from '../assets/restaut_2.jpg';
 import restaut5 from '../assets/restaut5.png';
+import useRevealOnScroll from './useRevealOnScroll'
 
 function Apropos() {
-
+   useRevealOnScroll()
   return (
     <>
     <section id="apropos-section" class="Apropos">

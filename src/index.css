@@ -15,4 +15,15 @@ html, body {
 
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.92);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
 

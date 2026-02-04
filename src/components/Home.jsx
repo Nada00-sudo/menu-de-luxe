@@ -8,12 +8,16 @@ import forchette from '../assets/forchette.png'
 import couteau from '../assets/couteau.png'
 import { useNavigate } from "react-router-dom";
 
+
 function Home() {
   const navigate = useNavigate();
   return (
     <>
       <Hero />
-      <Apropos />
+      <div class="reveal">
+        <Apropos />
+      </div>
+      
 
       <div className="pattern-band"></div>
 
