@@ -27,23 +27,40 @@ function Hero() {
   // ✅ AJOUT
   const videoRef = useRef(null)
 
-  useEffect(() => {
-    const unlockVideo = () => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {})
-      }
-      window.removeEventListener('touchstart', unlockVideo)
-      window.removeEventListener('click', unlockVideo)
+  const isIOS = () => {
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  )
+}
+useEffect(() => {
+  // ✅ CAS NON-iOS : autoplay direct
+  if (!isIOS()) {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
+    }
+    return
+  }
+
+  // ✅ CAS iOS : attendre interaction utilisateur
+  const unlockVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {})
     }
 
-    window.addEventListener('touchstart', unlockVideo)
-    window.addEventListener('click', unlockVideo)
+    window.removeEventListener('touchstart', unlockVideo)
+    window.removeEventListener('click', unlockVideo)
+  }
 
-    return () => {
-      window.removeEventListener('touchstart', unlockVideo)
-      window.removeEventListener('click', unlockVideo)
-    }
-  }, [])
+  window.addEventListener('touchstart', unlockVideo, { passive: true })
+  window.addEventListener('click', unlockVideo)
+
+  return () => {
+    window.removeEventListener('touchstart', unlockVideo)
+    window.removeEventListener('click', unlockVideo)
+  }
+}, [])
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,7 +80,8 @@ function Hero() {
         ref={videoRef}         
         className="hero-video"
         src={heroVideo}
-        muted               
+        muted            
+        autoPlay           
         loop
         playsInline           
         preload="auto"
